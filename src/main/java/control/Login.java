@@ -39,7 +39,7 @@ public class Login extends HttpServlet {
                     response.sendRedirect("pagina_cliente.jsp");
                 } else {
                     // Tipo de usuario desconocido, redirigir a una página genérica o mostrar un mensaje de error
-                    response.sendRedirect("pagina_generica.jsp");
+                    response.sendRedirect("login.jsp");
                 }
             } else {
                 // Credenciales inválidas, redirigir al usuario de vuelta al formulario de inicio de sesión con un mensaje de error
@@ -58,9 +58,7 @@ public class Login extends HttpServlet {
             nuevoUsuario.setNom_usuario(name);
             nuevoUsuario.setCorreo(email);
             nuevoUsuario.setPass_usuario(password);
-            nuevoUsuario.setTelefono(email);
-            nuevoUsuario.setDireccion(email);
-            nuevoUsuario.setDni(email);
+
 
             // Guardar el nuevo usuario en la base de datos
             daoUsuarios.registrarUsuario(nuevoUsuario);
