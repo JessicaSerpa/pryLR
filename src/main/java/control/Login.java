@@ -58,6 +58,9 @@ public class Login extends HttpServlet {
             nuevoUsuario.setNom_usuario(name);
             nuevoUsuario.setCorreo(email);
             nuevoUsuario.setPass_usuario(password);
+            nuevoUsuario.setTelefono(null);
+            nuevoUsuario.setDireccion(null);
+            nuevoUsuario.setDni(null);
 
             // Guardar el nuevo usuario en la base de datos
             daoUsuarios.registrarUsuario(nuevoUsuario);
