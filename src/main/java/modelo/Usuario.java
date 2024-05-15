@@ -31,19 +31,9 @@ public class Usuario {
     }
 
         public String getCorreo() {
-        if (correo != null) {
-            int atIndex = correo.indexOf('@');
-            if (atIndex != -1) { // Verifica si se encontró el carácter '@'
-                return correo.substring(0, atIndex);
-            } else {
-                // Si no se encuentra el carácter '@', devuelve la cadena original
-                return correo;
-            }
-        } else {
-            // Si emp_codigo es nulo, devuelve nulo
-            return null;
+            return correo;
         }
-    }
+    
     public void setCorreo(String correo) {
         this.correo = correo;
     }
